@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import banner from "../assets/banner.png";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Login = () => {
   return (
@@ -29,11 +31,13 @@ const Login = () => {
             backgroundColor: "#eee",
             padding: "2rem",
             borderRadius: "1rem",
-            width: "26rem",
+            width: "35rem",
           }}
         >
           <h1>Giriş</h1>
-          <div className="d-flex justify-content-between  align-items-center  ">
+          <div className="d-flex justify-content-between  align-items-center  " style={{
+            width:"400px"
+          }} >
             <div>
               <svg width="2.5em" height="2.5em" viewBox="0 0 24 24">
                 <path
@@ -49,8 +53,16 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              className="input"
+              className="form-control"
               placeholder="Email "
+              style={{
+                border:"2px solid red",
+                width:"600px",
+                flex:1
+              }}
+            
+            
+            
             ></input>
           </div>
           <br /> <br />
@@ -71,14 +83,21 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              className="input"
+               className="form-control"
               placeholder="password"
             ></input>
           </div>
           <br /> <br />
-          <button className="buttongr " style={{
-            marginLeft:"15rem"
-          }} > Giriş</button>
+          <button
+            className="buttongr "
+            style={{
+              marginLeft: "25rem",
+              padding:"1rem 2rem"
+            }}
+          >
+            {" "}
+            Giriş
+          </button>
           <hr
             noshade
             size="7"
@@ -90,17 +109,51 @@ const Login = () => {
               borderRadius: "75%",
             }}
           />
+          <div className="d-flex justify-content-between  align-items-center  ">
+            <div>
+              <button className="buttonş">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> 🙄 Şifremi Unuttum
+              </button>
+            </div>
+
+            <div className="d-flex justify-content-center align-items-center " >
+              <button className="btn btn-danger">
+                <svg width="1em" height="1em" viewBox="0 0 48 48">
+                  <mask id="svgIDa">
+                    <path
+                      fill="#fff"
+                      stroke="#fff"
+                      strokeLinejoin="round"
+                      strokeWidth="4"
+                      d="M30 4H18v14H4v12h14v14h12V30h14V18H30V4Z"
+                    ></path>
+                  </mask>
+                  <path
+                    fill="#888888"
+                    d="M0 0h48v48H0z"
+                    mask="url(#svgIDa)"
+                  ></path>
+                </svg>
+              </button>
+
+              <label htmlFor="">Yeni Kayıt</label>
+            </div>
+          </div>
         </form>
         <img
-        className="d-md-none d-sm-none d-lg-block"
+          className="d-md-none d-sm-none d-lg-block"
           style={{
             borderRadius: "1rem",
-            
           }}
           src={banner}
           alt=""
         />
+       
       </div>
+       <Footer/>
     </header>
   );
 };
