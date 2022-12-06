@@ -1,23 +1,23 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import {Link} from "react-router-dom"
-const navbar=()=> {
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+function BasicExample() {
   return (
-    <Navbar>
+    <Navbar bg="info" expand="lg"  >
       <Container>
-        <Link to="/home">Anasayfa</Link>
-        <Link to="/communication">İletişim</Link>
-        <Link to="/iade">İptal,İade koşulları ve Gizlilik</Link>
-        <Link to="/hizmet">Hizmet Sözleşmesi</Link>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
+         <Nav.Link href="#home">Anasayfa</Nav.Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            {/* <Nav.Link href="#home">Home</Nav.Link> */}
+            <Nav.Link href="#link">İletişim</Nav.Link>
+            <Nav.Link href="#link">İptal,iade Koşulları ve Gizlilik</Nav.Link>
+            <Nav.Link href="#link">Hizmet Sözleşmesi</Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
-
-export default navbar;
+export default BasicExample;
