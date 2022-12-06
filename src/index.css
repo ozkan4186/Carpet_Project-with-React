@@ -69,3 +69,96 @@ code {
  outline-color: #4f30d8;
  /* place-content: "Enter your message!"; */
 }
+.buttongr {
+ --glow-color: #eee;
+ --glow-spread-color:  #4f30d8;
+ --enhanced-glow-color:  #4f30d8;
+ --btn-color:  #4f30d8;
+ border: .25px solid var(--glow-color);
+ padding: 15px 23px;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 5px;
+ outline: none;
+ box-shadow: 0 0 5px .25px var(--glow-color),
+        0 0 4px 5px var(--glow-spread-color),
+        inset 0 0 .75px .25px var(--glow-color);
+ text-shadow: 0 0 .5px var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+.buttongr::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2px);
+ opacity: .7;
+ transform: perspective(1.5px) rotateX(35deg) scale(1, .6);
+}
+
+.buttongr:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 15px .5px var(--glow-color),
+        0 0 15px 5px var(--glow-spread-color),
+        inset 0 0 15px 12px var(--glow-color);
+}
+
+.buttongr:active {
+ box-shadow: 0 0 0.6px .25px var(--glow-color),
+        0 0 2.5px 2px var(--glow-spread-color),
+        inset 0 0 .5px .25px var(--glow-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
