@@ -23,7 +23,7 @@ code {
 /* button styling */
 .button {
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color:#4f30d8;
   --animation-color: #4f30d8;
   --fs-size: 2em;
   letter-spacing: 3px;
@@ -52,4 +52,20 @@ code {
 .button:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
+}
+.input {
+ border: none;
+ border-radius: 15px;
+ padding: 15px;
+ background-color: #e8e8e8;
+ box-shadow: 6px 6px 12px #4f30d8a1,
+             -6px -6px 12px #4f30d8a1;
+ font-size: medium;
+ font-weight: bold;
+ max-width: 200px;
+}
+
+.input:focus {
+ outline-color: #4f30d8;
+ /* place-content: "Enter your message!"; */
 }
