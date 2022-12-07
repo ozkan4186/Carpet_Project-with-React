@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 /* === removing default button style ===*/
@@ -23,8 +23,8 @@ code {
 /* button styling */
 .button {
   --border-right: 6px;
-  --text-stroke-color:#4f30d8;
-  --animation-color: #4f30d8;
+  --text-stroke-color: rgba(224, 15, 15, 0.6);
+  --animation-color:  ;
   --fs-size: 2em;
   letter-spacing: 3px;
   text-decoration: none;
@@ -51,222 +51,177 @@ code {
 /* hover */
 .button:hover .hover-text {
   width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color))
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
+
+/* hover */
+
 .input {
- border: none;
- border-radius: 15px;
- padding: 15px;
- background-color: #e8e8e8;
- box-shadow: 6px 6px 12px #4f30d8a1,
-             -6px -6px 12px #4f30d8a1;
- font-size: medium;
- font-weight: bold;
- max-width: 200px;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #e8e8e8;
+  box-shadow: 6px 6px 12px #4f30d8a1, -6px -6px 12px #4f30d8a1;
+  font-size: medium;
+  font-weight: bold;
+  max-width: 200px;
 }
 
 .input:focus {
- outline-color: #4f30d8;
- /* place-content: "Enter your message!"; */
+  outline-color: #4f30d8;
+  /* place-content: "Enter your message!"; */
 }
 .buttongr {
- --glow-color: #eee;
- --glow-spread-color:  #4f30d8;
- --enhanced-glow-color:  #4f30d8;
- --btn-color:  #4f30d8;
- border: .25px solid var(--glow-color);
- padding: 15px 23px;
- color: var(--glow-color);
- font-size: 15px;
- font-weight: bold;
- background-color: var(--btn-color);
- border-radius: 5px;
- outline: none;
- box-shadow: 0 0 5px .25px var(--glow-color),
-        0 0 4px 5px var(--glow-spread-color),
-        inset 0 0 .75px .25px var(--glow-color);
- text-shadow: 0 0 .5px var(--glow-color);
- position: relative;
- transition: all 0.3s;
+  --glow-color: #eee;
+  --glow-spread-color: #4f30d8;
+  --enhanced-glow-color: #4f30d8;
+  --btn-color: #4f30d8;
+  border: 0.25px solid var(--glow-color);
+  padding: 15px 23px;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 0 5px 0.25px var(--glow-color),
+    0 0 4px 5px var(--glow-spread-color),
+    inset 0 0 0.75px 0.25px var(--glow-color);
+  text-shadow: 0 0 0.5px var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
 }
 
 .buttongr::after {
- pointer-events: none;
- content: "";
- position: absolute;
- top: 120%;
- left: 0;
- height: 100%;
- width: 100%;
- /* background-color: var(--glow-spread-color); */
- filter: blur(2px);
- /* opacity: 1; */
- /* transform: perspective(3px) rotateX(35deg) scale(.8, .7); */
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: var(--glow-spread-color); */
+  filter: blur(2px);
+  /* opacity: 1; */
+  /* transform: perspective(3px) rotateX(35deg) scale(.8, .7); */
 }
 
 .buttongr:hover {
- color: var(--btn-color);
- background-color: var(--glow-color);
- box-shadow: 0 0 15px .5px var(--glow-color),
-        0 0 15px 5px var(--glow-spread-color),
-        inset 0 0 15px 12px var(--glow-color);
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 15px 0.5px var(--glow-color),
+    0 0 15px 5px var(--glow-spread-color), inset 0 0 15px 12px var(--glow-color);
 }
 
 .buttongr:active {
- box-shadow: 0 0 0.6px .25px var(--glow-color),
-        0 0 2.5px 2px var(--glow-spread-color),
-        inset 0 0 .5px .25px var(--glow-color);
+  box-shadow: 0 0 0.6px 0.25px var(--glow-color),
+    0 0 2.5px 2px var(--glow-spread-color),
+    inset 0 0 0.5px 0.25px var(--glow-color);
 }
 .buttonş {
- position: relative;
- padding: 1em 1.8em;
- outline: none;
- border: 1px solid #303030;
- background: #212121;
- color: #ae00ff;
- text-transform: uppercase;
- letter-spacing: 2px;
- font-size: 15px;
- overflow: hidden;
- transition: 0.2s;
- border-radius: 20px;
- cursor: pointer;
- font-weight: bold;
+  position: relative;
+  padding: 1em 1.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: #ae00ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .buttonş:hover {
- box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
- transition-delay: 0.6s;
+  box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+  transition-delay: 0.6s;
 }
 
 .buttonş span {
- position: absolute;
+  position: absolute;
 }
 
 .buttonş span:nth-child(1) {
- top: 0;
- left: -100%;
- width: 100%;
- height: 2px;
- background: linear-gradient(90deg, transparent, #ae00ff);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ae00ff);
 }
 
 .buttonş:hover span:nth-child(1) {
- left: 100%;
- transition: 0.7s;
+  left: 100%;
+  transition: 0.7s;
 }
 
 .buttonş span:nth-child(3) {
- bottom: 0;
- right: -100%;
- width: 100%;
- height: 2px;
- background: linear-gradient(90deg, transparent, #001eff);
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #001eff);
 }
 
 .buttonş:hover span:nth-child(3) {
- right: 100%;
- transition: 0.7s;
- transition-delay: 0.35s;
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
 }
 
 .buttonş span:nth-child(2) {
- top: -100%;
- right: 0;
- width: 2px;
- height: 100%;
- background: linear-gradient(180deg, transparent, #ae00ff);
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ae00ff);
 }
 
 .buttonş:hover span:nth-child(2) {
- top: 100%;
- transition: 0.7s;
- transition-delay: 0.17s;
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
 }
 
 .buttonş span:nth-child(4) {
- bottom: -100%;
- left: 0;
- width: 2px;
- height: 100%;
- background: linear-gradient(360deg, transparent, #001eff);
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #001eff);
 }
 
 .buttonş:hover span:nth-child(4) {
- bottom: 100%;
- transition: 0.7s;
- transition-delay: 0.52s;
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
 }
 
 .buttonş:active {
- background: #ae00af;
- background: linear-gradient(to top right, #ae00af, #001eff);
- color: #bfbfbf;
- box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
- transition: 0.1s;
+  background: #ae00af;
+  background: linear-gradient(to top right, #ae00af, #001eff);
+  color: #bfbfbf;
+  box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+  transition: 0.1s;
 }
 
-.buttonş:active span:nth-child(1) 
-span:nth-child(2) 
-span:nth-child(2) 
-span:nth-child(2) {
- transition: none;
- transition-delay: none;
+.buttonş:active
+  span:nth-child(1)
+  span:nth-child(2)
+  span:nth-child(2)
+  span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
 }
 .footer img {
   border-right: 1px solid #4f30d8;
   padding: 1rem 2rem;
   width: 7rem;
   height: 4rem;
-
-
 }
-.footer{
+.footer {
   text-align: center;
   margin-top: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

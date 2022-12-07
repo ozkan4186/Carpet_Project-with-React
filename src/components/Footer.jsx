@@ -30,7 +30,7 @@ const Footer = () => {
         <img src={unionpay} alt="" />
         <img src={ssl} alt="" />
         <img src={tree} alt="" />
-        <h3>Netahsilat | <a target="_blank" href="http://www.netahsilat.com">E-Tahsilat Sistemi</a></h3>
+        <h3>Netahsilat|<a target="_blank" href="http://www.netahsilat.com">E-Tahsilat Sistemi</a></h3>
     </div>
   )
 }

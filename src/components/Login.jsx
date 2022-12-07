@@ -8,22 +8,29 @@ const Login = () => {
   const navigate=useNavigate()
   return (
     <header>
-      <div className="d-flex justify-content-between  flex-lg-row flex-md-column flex-sm-column">
+      <div className="d-flex justify-content-between  flex-lg-row flex-md-column flex-sm-column mt-3 " style={{
+        width: "1150px",
+        margin: "0 auto",
+      }} >
         <img
           style={{
-            maxWidth: "300px",
+            maxWidth: "250px",
             textAlign: "center",
-            margin: "0 auto",
+          
           }}
           src={logo}
           alt=""
         />
         <button data-text="Awesome" class="button">
-          <span class="actual-text">&nbsp;üyeliksiz ödeme&nbsp;</span>
-          <span class="hover-text" aria-hidden="true">
-            &nbsp;üyeliksiz ödeme&nbsp;
-          </span>
-        </button>
+    <span class="actual-text">&nbsp;Uyeliksiz <br /> Ode&nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp;Uyeliksiz <br /> Ode&nbsp;</span>
+</button>
+
+      
+      
+      
+      
+      
       </div>
       <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 ">
         <form
