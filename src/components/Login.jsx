@@ -1,10 +1,11 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import banner from "../assets/banner.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 
 const Login = () => {
+  const navigate=useNavigate()
   return (
     <header>
       <div className="d-flex justify-content-between  flex-lg-row flex-md-column flex-sm-column">
@@ -35,10 +36,11 @@ const Login = () => {
           }}
         >
           <h1>Giriş</h1>
-          <div className="d-flex justify-content-between  align-items-center  " style={{
-            width:"400px"
-          }} >
-            <div>
+          <div
+            className="d-flex justify-content-between  align-items-center  "
+            style={{}}
+          >
+            <div className="d-flex align-items-center me-4">
               <svg width="2.5em" height="2.5em" viewBox="0 0 24 24">
                 <path
                   fill="#4f30d8"
@@ -53,21 +55,13 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              className="form-control"
+              className="form-control w-75 "
               placeholder="Email "
-              style={{
-                border:"2px solid red",
-                width:"600px",
-                flex:1
-              }}
-            
-            
-            
             ></input>
           </div>
           <br /> <br />
           <div className="d-flex justify-content-between  align-items-center  ">
-            <div>
+            <div className="d-flex align-items-center me-4  ">
               <svg width="2.5em" height="2.5em" viewBox="0 0 24 24">
                 <path
                   fill="#4f30d8"
@@ -83,7 +77,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-               className="form-control"
+              className="form-control w-75 "
               placeholder="password"
             ></input>
           </div>
@@ -92,7 +86,7 @@ const Login = () => {
             className="buttongr "
             style={{
               marginLeft: "25rem",
-              padding:"1rem 2rem"
+              padding: "1rem 2rem",
             }}
           >
             {" "}
@@ -119,8 +113,8 @@ const Login = () => {
               </button>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center " >
-              <button className="btn btn-danger">
+            <div className="d-flex justify-content-center align-items-center " onClick={()=>navigate("/register")} >
+              <button className="btn btn-danger"  >
                 <svg width="1em" height="1em" viewBox="0 0 48 48">
                   <mask id="svgIDa">
                     <path
@@ -139,7 +133,7 @@ const Login = () => {
                 </svg>
               </button>
 
-              <label htmlFor="">Yeni Kayıt</label>
+              <label  htmlFor="">Yeni Kayıt</label>
             </div>
           </div>
         </form>
@@ -151,9 +145,8 @@ const Login = () => {
           src={banner}
           alt=""
         />
-       
       </div>
-       <Footer/>
+      <Footer />
     </header>
   );
 };
