@@ -21,10 +21,20 @@ code {
 }
 
 /* button styling */
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
 .button {
   --border-right: 6px;
-  --text-stroke-color: rgba(224, 15, 15, 0.6);
-  --animation-color:  ;
+  --text-stroke-color: #4f30d8;
+  --animation-color: #4f30d8;
   --fs-size: 2em;
   letter-spacing: 3px;
   text-decoration: none;
@@ -219,7 +229,8 @@ code {
   border-right: 1px solid #4f30d8;
   padding: 1rem 2rem;
   width: 7rem;
-  height: 4rem;
+  height: 3rem;
+  margin-bottom: 2rem;
 }
 .footer {
   text-align: center;

@@ -1,39 +1,66 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import banner from "../assets/banner.png";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import { AuthContext } from "./context/AuthContext";
 
 const Login = () => {
-  const navigate=useNavigate()
+  const initialValues = {
+    email: "",
+    displayName: "",
+    password: "",
+  };
+
+  const navigate = useNavigate();
+  const { currentUser } = useContext(AuthContext);
+  
+  const [values, setValues] = useState(initialValues);
+  console.log(currentUser);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    
+  };
+  const handleChangeInfo=(e)=>{
+  e.preventDefault();
+  // const name=e.target.name;
+  // const value=e.target.value; 
+  const {name,value}=e.target;
+  setValues({...values,[name]:value})
+  console.log(values)
+}
+
   return (
     <header>
-      <div className="d-flex justify-content-between  flex-lg-row flex-md-column flex-sm-column mt-3 " style={{
-        width: "1150px",
-        margin: "0 auto",
-      }} >
+      <div
+        className="d-flex justify-content-between   flex-lg-row flex-md-column flex-sm-column mt-3 align-items-md-center align-items-sm-center "
+        style={{
+          width: "65%",
+          margin: "0 auto",
+        }}
+      >
         <img
           style={{
             maxWidth: "250px",
             textAlign: "center",
-          
           }}
           src={logo}
           alt=""
         />
-        <button data-text="Awesome" class="button">
-    <span class="actual-text">&nbsp;Uyeliksiz <br /> Ode&nbsp;</span>
-    <span class="hover-text" aria-hidden="true">&nbsp;Uyeliksiz <br /> Ode&nbsp;</span>
-</button>
-
-      
-      
-      
-      
-      
+        <button data-text="Awesome" className="button">
+          <span className="actual-text">
+            &nbsp;üyeliksiz <br /> ödeme&nbsp;
+          </span>
+          <span className="hover-text" aria-hidden="true">
+            &nbsp;üyeliksiz <br /> ödeme&nbsp;
+          </span>
+        </button>
       </div>
       <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 ">
         <form
+          onSubmit={handleSubmit}
           action=""
           style={{
             backgroundColor: "#eee",
@@ -64,6 +91,9 @@ const Login = () => {
               name="email"
               className="form-control w-75 "
               placeholder="Email "
+              value={values.email}
+              required
+              onChange={handleChangeInfo}
             ></input>
           </div>
           <br /> <br />
@@ -86,10 +116,14 @@ const Login = () => {
               name="password"
               className="form-control w-75 "
               placeholder="password"
+              value={values.password}
+              required
+              onChange={handleChangeInfo}
             ></input>
           </div>
           <br /> <br />
           <button
+            type="submit"
             className="buttongr "
             style={{
               marginLeft: "25rem",
@@ -120,8 +154,16 @@ const Login = () => {
               </button>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center " onClick={()=>navigate("/register")} >
-              <button className="btn btn-danger"  >
+            <div
+              className="d-flex justify-content-center align-items-center "
+              onClick={() => navigate("/register")}
+            >
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "#a47bf1ce",
+                }}
+              >
                 <svg width="1em" height="1em" viewBox="0 0 48 48">
                   <mask id="svgIDa">
                     <path
@@ -133,14 +175,14 @@ const Login = () => {
                     ></path>
                   </mask>
                   <path
-                    fill="#888888"
+                    fill="#0a0a0a"
                     d="M0 0h48v48H0z"
                     mask="url(#svgIDa)"
                   ></path>
                 </svg>
               </button>
 
-              <label  htmlFor="">Yeni Kayıt</label>
+              <label htmlFor="">Yeni Kayıt</label>
             </div>
           </div>
         </form>

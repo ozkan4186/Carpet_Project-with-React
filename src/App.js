@@ -1,12 +1,15 @@
 import "./App.css";
+import AuthContextProvider from "./components/context/AuthContext";
 import Navbar from "./components/Navbar";
 import Approuter from "./router/Approuter";
 
 function App() {
   return (
-    <div>
-      <Approuter />
-    </div>
+    <AuthContextProvider>
+        <Approuter />
+    </AuthContextProvider>
+    
+    
   );
 }
 
