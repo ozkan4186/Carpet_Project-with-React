@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { AuthContext } from "./context/AuthContext";
 function BasicExample() {
+  const{ currentUser}=useContext(AuthContext)
   return (
     <Navbar bg="info" expand="lg"  >
       <Container>
@@ -15,6 +18,10 @@ function BasicExample() {
             <Nav.Link href="#link">İptal,iade Koşulları ve Gizlilik</Nav.Link>
             <Nav.Link href="#link">Hizmet Sözleşmesi</Nav.Link>
           </Nav>
+          <div>
+             {currentUser.email && currentUser.displayName }
+          </div>
+       
         </Navbar.Collapse>
       </Container>
     </Navbar>

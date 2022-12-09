@@ -5,7 +5,12 @@ import { createContext ,useState,useEffect} from 'react'
 export const AuthContext = createContext();
 
 const AuthContextProvider = ({children}) => {
-  const [currentUser, setCurrentUser] = useState("");
+    const initialValues = {
+  email: "",
+  displayName: "özkan",
+  password: "",
+};
+  const [currentUser, setCurrentUser] = useState(initialValues);
 
 //   useEffect(() => {
     // 
@@ -13,9 +18,9 @@ const AuthContextProvider = ({children}) => {
 //   
 //   }, [])
 //   
-
+const values={currentUser,setCurrentUser}
   return(
-    <AuthContext.Provider value={{currentUser}}>
+    <AuthContext.Provider value={values}>
       {children}
     </AuthContext.Provider>
   )

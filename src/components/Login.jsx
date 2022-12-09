@@ -6,31 +6,23 @@ import Footer from "./Footer";
 import { AuthContext } from "./context/AuthContext";
 
 const Login = () => {
-  const initialValues = {
-    email: "",
-    displayName: "",
-    password: "",
-  };
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
 
   const navigate = useNavigate();
-  const { currentUser } = useContext(AuthContext);
-  
-  const [values, setValues] = useState(initialValues);
-  console.log(currentUser);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    
+        console.log(currentUser);
+        navigate("/home")
   };
-  const handleChangeInfo=(e)=>{
-  e.preventDefault();
-  // const name=e.target.name;
-  // const value=e.target.value; 
-  const {name,value}=e.target;
-  setValues({...values,[name]:value})
-  console.log(values)
-}
+  const handleChangeInfo = (e) => {
+    e.preventDefault();
+    // const name=e.target.name;
+    // const value=e.target.value;
+    const { name, value } = e.target;
+    setCurrentUser({ ...currentUser, [name]: value });
+    console.log(currentUser);
+  };
 
   return (
     <header>
@@ -91,7 +83,7 @@ const Login = () => {
               name="email"
               className="form-control w-75 "
               placeholder="Email "
-              value={values.email}
+              value={currentUser?.email}
               required
               onChange={handleChangeInfo}
             ></input>
@@ -116,7 +108,7 @@ const Login = () => {
               name="password"
               className="form-control w-75 "
               placeholder="password"
-              value={values.password}
+              value={currentUser?.password}
               required
               onChange={handleChangeInfo}
             ></input>
