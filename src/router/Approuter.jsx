@@ -18,6 +18,7 @@ const Approuter = () => {
           <Route path="/home"  element={<Home/>} />
           <Route path="/hizmet" element={<Hizmet />} />
           <Route path="/return" element={<Return />} />
+          <Route path="/communication" element={<Return />}/>
         </Route>
         <Route path="/register" element={<Register />} />
       </Routes>

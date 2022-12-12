@@ -16,14 +16,6 @@ const Home = () => {
     navigate("/home");
   };
 
-
-
-
-
-
-
-
-
   return (
     <header>
       <div
@@ -51,20 +43,27 @@ const Home = () => {
         </button>
       </div>
       <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 ">
-          <div  style={{
+        <div
+          style={{
             display: "flex",
             flexDirection: "column",
-            borderRadius:"1rem",
-            backgroundColor:"lightsteelblue",
-            justifyContent:"space-between",
-            alignItems:"center",
-            padding:"2rem",  
-          }} >
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3effma2teh_x6Li-w2DJagf-WHy20wfRcA&usqp=CAU" alt="" />
-            <h3>ONLINE ÖDEME YAPMAK İÇİN</h3>
-            <button className="buttonO" > TIKLAYINIZ
-</button>
-          </div>
+            borderRadius: "1rem",
+            backgroundColor: "lightsteelblue",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "3.2rem 4rem ",
+          }}
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3effma2teh_x6Li-w2DJagf-WHy20wfRcA&usqp=CAU"
+            alt=""
+            className="mb-2 rounded"
+          />
+          <h3>ONLINE ÖDEME YAPMAK İÇİN</h3>
+          <button className="buttono" onClick={()=>navigate("/sanalpos")} >
+            <span className="text">TIKLAYINIZ</span>
+          </button>
+        </div>
 
         <img
           className="d-md-none d-sm-none d-lg-block"
