@@ -7,8 +7,12 @@ export const AuthContext = createContext();
 const AuthContextProvider = ({children}) => {
     const initialValues = {
   email: "",
-  displayName: "özkan",
+  displayName: "",
   password: "",
+  firstName:"",
+  lastName:"",
+  login:"False"
+
 };
   const [currentUser, setCurrentUser] = useState(initialValues);
 

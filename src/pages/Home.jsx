@@ -7,6 +7,7 @@ import { AuthContext } from "../components/context/AuthContext";
 
 const Home = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
+  console.log(currentUser)
 
   const navigate = useNavigate();
 

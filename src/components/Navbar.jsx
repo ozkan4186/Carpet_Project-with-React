@@ -8,7 +8,10 @@ import { AuthContext } from "./context/AuthContext";
 function BasicExample() {
   const { currentUser } = useContext(AuthContext);
   return (
-    <Navbar bg="info" expand="lg">
+    <Navbar bg="info" expand="lg" style={{
+      position:"sticky",
+      top:"0"
+    }} >
       <Container>
         <NavLink className="nav"  to="/home">Anasayfa</NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
